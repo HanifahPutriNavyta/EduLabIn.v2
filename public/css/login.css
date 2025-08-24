@@ -1,0 +1,270 @@
+:root {
+  --primary: #002843;
+  --primary-800: #174375;
+  --primary-900: #183a62;
+  --primary-950: #0b192c;
+  --white-blue: #f0f8ff;
+  --secondary: #ed8b00;
+  --secondary-400: #ff9c32;
+  --secondary-500: #ff7e0a;
+  --secondary-orange800: #a1380b;
+  --white: #ffffff;
+  --black: #000000;
+  --neutral-50: #f6f6f6;
+  --neutral-100: #e7e7e7;
+  --neutral-200: #d1d1d1;
+  --neutral-300: #b0b0b0;
+  --neutral-500: #6d6d6d;
+  --neutral-600: #5d5d5d;
+  --neutral-800: #454545;
+  --based-100: #efefef;
+  --based-500: #7c7c7c;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* TEXT & COMPONENTS */
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.divider {
+    border-top: 1px solid var(--gray2);
+    margin: 15px 0;
+    width: 100%;
+}
+
+.card-style {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.primary-btn {
+    background-color: var(--secondary);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray2);
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* LOGIN PAGE */
+.login-page {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 390px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo {
+    width: 250px;
+    margin-bottom: 30px;
+    object-fit: cover;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-input {
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--white);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--neutral600);
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 4px rgba(117, 117, 117, 0.5);
+}
+
+.login-input::placeholder {
+    opacity: 0.5;
+}
+
+/* DROPDOWN ROLE */
+.btn-group.w-100 {
+    width: 100%;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(117, 117, 117, 0.5);
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: visible;
+    display: flex;
+    color: var(--neutral600);
+    position: relative;
+}
+
+.btn.role-display {
+    width: calc(100% - 50px);
+    height: 50px;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    padding: 10px 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}  
+
+.btn.dropdown-toggle-split {
+    width: 50px;
+    height: 50px;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.dropdown-toggle-split.rotate {
+    transform: rotate(180deg);
+}
+/* Hapus panah dropdown default */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Untuk gambar ikon dropdown */
+.dropdown-toggle img {
+    transition: transform 0.3s ease;
+}
+
+/* Saat aktif, rotasi ikon */
+.dropdown-toggle.active img {
+    transform: rotate(180deg);
+}
+
+/* Garis pemisah */
+.split-line {
+    width: 1px;
+    height: 100%;
+    background-color: var(--primary);
+    align-self: center;
+}
+
+/* DROPDOWN MENU */
+.role-dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(117, 117, 117, 0.5);
+    margin-top: 2;
+    border: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--white);
+}
+
+.role-dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.role-dropdown-item {
+    padding: 5px 20px;
+    font-size: 16px;
+    color: var(--gray2);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-top: 1.5px solid var(--gray2);
+    margin: 0;
+    width: 100%;
+}
+
+.role-dropdown-menu .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: rgba(237, 139, 0, 0.1);
+    color: var(--neutral600);
+}
+
+/* LINKS & BUTTONS */
+.forgot-password {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    color: var(--secondary);
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 120px;
+    height: 45px;
+    margin: 0 auto;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary-orange800);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-text-container {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.login-link {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 15px;
+    }
+}

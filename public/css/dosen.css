@@ -1,0 +1,225 @@
+:root {
+    --primary: #002843;
+    --primary-800: #174375;
+    --primary-900: #183a62;
+    --primary-950: #0b192c;
+    --white-blue: #f0f8ff;
+    --secondary: #ed8b00;
+    --secondary-400: #ff9c32;
+    --secondary-500: #ff7e0a;
+    --secondary-orange800: #a1380b;
+    --white: #ffffff;
+    --black: #000000;
+    --neutral-50: #f6f6f6;
+    --neutral-100: #e7e7e7;
+    --neutral-200: #d1d1d1;
+    --neutral-300: #b0b0b0;
+    --neutral-500: #6d6d6d;
+    --neutral-600: #5d5d5d;
+    --neutral-800: #454545;
+    --based-100: #efefef;
+    --based-500: #7c7c7c;
+}
+
+/* GLOBAL */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.judul-halaman {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.divider {
+    border-top: 1px solid var(--neutral-200);
+    margin: 20px 0;
+}
+
+/* SEARCH BAR*/
+.search-container {
+    max-width: 100%; 
+    margin-bottom: 20px;
+    padding: 10px 0px 10px 0px;
+
+}
+
+.search-input {
+    background-color: var(--neutral-100) !important;
+    color: var(--neutral-300) !important;
+    border: none;
+    border-radius: 10px !important;
+    box-shadow: 0px 4px 4px rgba(117, 117, 117, 0.5);
+    height: 40px;
+    padding: 10px 20px 10px 30px;
+    font-size: 14px;}
+
+.search-icon {
+    pointer-events: none;
+    z-index: 2;
+    font-size: 1.2rem;
+    color: var(--neutral-300);
+    padding-right: 10px;
+}
+
+.search-input:focus {
+    background-color: var(--neutral-100) !important;
+    box-shadow: 0px 4px 4px rgba(117, 117, 117, 0.5) !important;
+    color: var(--neutral-300) !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.search-input:focus + .search-icon {
+    color: var(--neutral-300) !important; 
+    display: block !important;
+}
+
+.search-container .form-control::placeholder {
+    color: var(--neutral-300) !important;
+    opacity: 1 !important;
+}
+
+
+/* BATAS GARIS */
+.line-div {
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--neutral-200);
+    box-sizing: border-box;
+    height: 1px;
+    margin: 20px 0;
+}
+
+/* DASHBOARD */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    font-size: 16px;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px var(--neutral-200);
+    transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+    background-color: var(--white-blue);
+}
+
+.menu-icon {
+    width: 30px;
+}
+
+/* CARD BERITA ACARA & FILE NILAI */
+.pertemuan-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pertemuan-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.pertemuan-card .card-header {
+    background-color: var(--primary-800);
+    color: var(--white);
+    padding: 12px 20px;
+    padding-left: 14px;
+    border-radius: 0;
+    font-weight: 600;
+    border-bottom: 1px solid var(--primary)
+}
+
+.card-body {
+    padding-left: 20px;
+}
+
+.card-detail {
+    padding: 14px;
+}
+
+.pertemuan-card:hover {
+    background-color: var(--white-blue);
+    box-shadow: 0 6px 12px var(--neutral-200);
+}
+
+/* DAFTAR MATA KULIAH & KELAS */
+.matkul-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.matkul-item-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.matkul-item {
+    background-color: var(--white);
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px var(--neutral-200);
+    font-weight: 600;
+    color: var(--primary);
+    border: 1px solid var(--primary-900);
+}
+
+.matkul-item:hover {
+    background-color: var(--white-blue);
+    box-shadow: 0 6px 12px var(--neutral-200);
+}
+
+/* MODAL STYLES */
+.modal-title{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.btn-close {
+    --bs-btn-close-color: var(--black);
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+#downloadPdfBtn {
+    background-color: var(--secondary);
+    color: var(--black);
+    font-weight: 600;
+    font-size: 11px;
+    border-radius: 10px;
+    box-shadow: 2px solid var(--black);
+}
+
+#downloadPdfBtn:hover {
+    background-color: var(--secondary-500);
+}
+
+.pdf-icon-large {
+    font-size: 3rem;
+    color: var(--secondary);
+}
