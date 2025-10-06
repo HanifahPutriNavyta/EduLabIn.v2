@@ -68,14 +68,14 @@ class CalonAsprakController extends Controller
     public function PengumumanCasprak()
     {
         $data = [
-            'pengumumanData' => Pengumuman::orderBy('created_at', 'desc')->get()
+            'pengumumanData' => Pengumuman::where('status', 1)->orderBy('created_at', 'desc')->get()
         ];
         return view('pengumuman.list-casprak', $data);
     }
 
     public function DetailPengumumanCasprak($id)
     {
-        $pengumuman = Pengumuman::findOrFail($id);
+        $pengumuman = Pengumuman::where('pengumuman_id', $id)->where('status', 1)->firstOrFail();
         $data = [
             'pengumuman' => $pengumuman
         ];

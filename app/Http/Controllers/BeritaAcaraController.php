@@ -248,8 +248,10 @@ class BeritaAcaraController extends Controller
             return redirect()->back()->with('error', 'File tidak ditemukan.');
         }
 
-        $filePath = $disk->path($relative);
-        return response()->download($filePath, $beritaAcara->judul . '.pdf');
+    $ext = pathinfo($beritaAcara->upload_berita_acara, PATHINFO_EXTENSION) ?: 'pdf';
+    $downloadName = trim(($beritaAcara->judul ?? 'berita_acara')) . '.' . $ext;
+    $filePath = $disk->path($relative);
+    return response()->download($filePath, $downloadName);
     }
 
     public function downloadBukti(BeritaAcara $beritaAcara)
@@ -266,7 +268,9 @@ class BeritaAcaraController extends Controller
             return redirect()->back()->with('error', 'File tidak ditemukan.');
         }
 
-        $filePath = $disk->path($relative);
-        return response()->download($filePath, $beritaAcara->judul . '_bukti.pdf');
+    $ext = pathinfo($beritaAcara->upload_bukti_pertemuan, PATHINFO_EXTENSION) ?: 'pdf';
+    $downloadName = trim(($beritaAcara->judul ?? 'berita_acara')) . '_bukti.' . $ext;
+    $filePath = $disk->path($relative);
+    return response()->download($filePath, $downloadName);
     }
 }
