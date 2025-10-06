@@ -80,7 +80,7 @@
                                     data-bs-target="#pdfModal"
                                     data-judul="{{ $beritaAcara->judul }} - Berita Acara"
                                     data-file="{{ asset('storage/berita-acara/file/' . $beritaAcara->upload_berita_acara) }}"
-                                    data-download="{{ route('berita-acara.download', $beritaAcara->berita_id) }}">
+                                    data-download="{{ route('berita-acara.download.public', $beritaAcara->berita_id) }}">
                                     <i class="bi bi-file-earmark-pdf"></i>
                                 </button>
                                 @endif
@@ -90,7 +90,7 @@
                                     data-bs-target="#pdfModal"
                                     data-judul="{{ $beritaAcara->judul }} - Bukti Pertemuan"
                                     data-file="{{ asset('storage/berita-acara/foto/' . $beritaAcara->upload_bukti_pertemuan) }}"
-                                    data-download="{{ route('berita-acara.download-bukti', $beritaAcara->berita_id) }}">
+                                    data-download="{{ route('berita-acara.download-bukti.public', $beritaAcara->berita_id) }}">
                                     <i class="bi bi-file-earmark-pdf"></i>
                                 </button>
                                 @endif
