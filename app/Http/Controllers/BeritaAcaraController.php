@@ -170,8 +170,8 @@ class BeritaAcaraController extends Controller
             'judul' => 'required|string|max:255',
             'tanggal' => 'required|date',
             'tipe_pertemuan' => 'required|in:Luring,Daring',
-            'file-input-beritaAcara' => 'nullable|file|mimes:pdf|max:10240',
-            'file-input-buktiPertemuan' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:10240'
+            'file-input-beritaAcara' => 'required|file|mimes:pdf|max:10240',
+            'file-input-buktiPertemuan' => 'required|file|mimes:pdf,jpg,jpeg,png|max:10240'
         ]);
 
         // Prepare data for update
