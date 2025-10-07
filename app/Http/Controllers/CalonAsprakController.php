@@ -152,7 +152,7 @@ class CalonAsprakController extends Controller
             'status' => 'required|string|max:20',
             'matkul_id' => 'required|string',
             'bukti' => 'required|file|mimes:pdf|max:2048',
-            'foto-diri' => 'required|file|mimes:pdf,jpg,jpeg,png|max:2048'
+            'foto-diri' => 'required|file|mimes:jpg,jpeg,png|max:2048'
         ]);
         try {
             DB::beginTransaction();

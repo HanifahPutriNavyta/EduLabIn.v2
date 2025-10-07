@@ -94,9 +94,9 @@ class InformasiNilaiController extends Controller
 
         $request->validate([
             'judul' => 'required|string|max:100',
-            'deskripsi' => 'nullable|string',
+            'deskripsi' => 'required|string',
             'tanggal' => 'required|date',
-            'upload_file' => 'nullable|file|mimes:pdf|max:2048',
+            'upload_file' => 'required|nullable|file|mimes:pdf|max:2048',
             'kelas_id' => 'required|exists:kelas_praktikums,kelas_id'
         ]);
 
