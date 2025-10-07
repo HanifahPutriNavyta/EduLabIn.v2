@@ -172,6 +172,20 @@ class BeritaAcaraController extends Controller
             'tipe_pertemuan' => 'required|in:Luring,Daring',
             'file-input-beritaAcara' => 'required|file|mimes:pdf|max:10240',
             'file-input-buktiPertemuan' => 'required|file|mimes:pdf,jpg,jpeg,png|max:10240'
+        ], [
+            'judul.required' => 'Judul wajib diisi.',
+            'judul.max' => 'Judul tidak boleh lebih dari 255 karakter.',
+            'tanggal.required' => 'Tanggal wajib diisi.',
+            'tanggal.date' => 'Format tanggal tidak valid.',
+            'tipe_pertemuan.required' => 'Tipe pertemuan wajib dipilih.',
+            'file-input-beritaAcara.required' => 'File berita acara wajib diunggah.',
+            'file-input-beritaAcara.file' => 'File yang diupload tidak valid.',
+            'file-input-beritaAcara.mimes' => 'File berita acara harus berformat PDF.',
+            'file-input-beritaAcara.max' => 'Ukuran file berita acara tidak boleh lebih dari 10MB.',
+            'file-input-buktiPertemuan.required' => 'File bukti pertemuan wajib diunggah.',
+            'file-input-buktiPertemuan.file' => 'File yang diupload tidak valid.',
+            'file-input-buktiPertemuan.mimes' => 'File bukti pertemuan harus berformat PDF, JPG, JPEG, atau PNG.',
+            'file-input-buktiPertemuan.max' => 'Ukuran file bukti pertemuan tidak boleh lebih dari 10MB.'
         ]);
 
         // Prepare data for update

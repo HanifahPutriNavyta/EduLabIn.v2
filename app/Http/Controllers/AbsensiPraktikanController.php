@@ -58,7 +58,7 @@ class AbsensiPraktikanController extends Controller
             'kelas_id' => 'required|exists:kelas_praktikums,kelas_id',
             'tanggal' => 'required|date|before_or_equal:today',
             'deskripsi' => 'required|string|max:1000',
-            'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,jpeg,png|max:2048',
+            'upload_file' => 'required|file|mimes:pdf|max:2048',
         ], [
             'judul.required' => 'Judul absensi wajib diisi.',
             'judul.max' => 'Judul tidak boleh lebih dari 255 karakter.',
@@ -70,7 +70,7 @@ class AbsensiPraktikanController extends Controller
             'deskripsi.required' => 'Deskripsi wajib diisi.',
             'deskripsi.max' => 'Deskripsi tidak boleh lebih dari 1000 karakter.',
             'upload_file.file' => 'File yang diupload tidak valid.',
-            'upload_file.mimes' => 'File harus berformat PDF, DOC, DOCX, JPG, JPEG, atau PNG.',
+            'upload_file.mimes' => 'File harus berformat PDF.',
             'upload_file.max' => 'Ukuran file tidak boleh lebih dari 2MB.',
         ]);
 

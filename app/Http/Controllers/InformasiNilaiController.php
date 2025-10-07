@@ -98,6 +98,16 @@ class InformasiNilaiController extends Controller
             'tanggal' => 'required|date',
             'upload_file' => 'required|file|mimes:pdf|max:2048',
             'kelas_id' => 'required|exists:kelas_praktikums,kelas_id'
+        ], [
+            'judul.required' => 'Judul wajib diisi.',
+            'judul.max' => 'Judul tidak boleh lebih dari 100 karakter.',
+            'tanggal.required' => 'Tanggal wajib diisi.',
+            'tanggal.date' => 'Format tanggal tidak valid.',
+            'deskripsi.required' => 'Deskripsi wajib diisi.',
+            'deskripsi.max' => 'Deskripsi tidak boleh lebih dari 1000 karakter.',
+            'upload_file.file' => 'File yang diupload tidak valid.',
+            'upload_file.mimes' => 'File harus berformat PDF.',
+            'upload_file.max' => 'Ukuran file tidak boleh lebih dari 2MB.',
         ]);
 
         $data = [
