@@ -47,12 +47,21 @@
                 </div>
                 <div class="matkul-footer">
                     <span class="kuota">Jumlah Kelas Praktikum: {{ $matkul['kuota'] }}</span>
-                    <a href="{{ route('calonAsprak.FormPendaftaranCasprak', $matkul['id']) }}" class="btn-daftar">
-                        Daftar
-                    </a>
-                </div>
+                    @if(!$matkul['has_pendaftaran'])
+                        <span class="text-muted">Pendaftaran belum dibuka</span>
+                    @elseif(!$matkul['has_classes'])
+                        <span class="text-danger">Belum ada kelas tersedia</span>
+                    @elseif($matkul['is_full'])
+                        <span class="text-warning">Kuota penuh</span>
+                    @elseif(!$matkul['available'])
+                        <span class="text-secondary">Tidak tersedia</span>
+                    @else
+                        <a href="{{ route('calonAsprak.FormPendaftaranCasprak', $matkul['id']) }}" class="btn-daftar">
+                            Daftar
+                        </a>
+                    @endif
+                </div>
             </div>
-        </div>
         @endforeach
     </div>
 </div>

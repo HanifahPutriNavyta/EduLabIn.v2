@@ -232,7 +232,7 @@ class CalonAsprakController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Pendaftaran berhasil dikirim!'
+                'message' => 'Form Anda Telah Berhasil Di Simpan!'
             ], 200);
 
         } catch (\Exception $e) {
